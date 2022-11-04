@@ -1,0 +1,14 @@
+<?php
+
+include 'conexion.php';
+
+$consulta= mysqli_query($con, "SELECT cliente.id,nombre, apellido1,apellido2
+FROM pedido JOIN cliente ON
+pedido.id_cliente=cliente.id
+GROUP BY id_cliente
+ORDER BY apellido1 ASC");
+
+while ($mostrar_consulta= mysqli_fetch_array($consulta)) {
+	echo $mostrar_consulta[id]."<br>";
+	echo $mostrar_consulta['nombre']."<br>";
+}

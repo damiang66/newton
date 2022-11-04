@@ -1,0 +1,155 @@
+//Verifica si el dato ingresado como parametro es numero entero positivo.
+function esEnteroPositivo( inputValor )   
+{
+   inputString = inputValor.toString();
+   for ( var i = 0; i < inputString.length; i++ )    
+   {
+     var unCaracter = inputString.charAt( i );
+       
+     if ( unCaracter < "0" || unCaracter > "9" ) return false;
+   }
+   return true;
+}
+//Verifica si el dato ingresado como parametro es numero racional positivo.
+function esRacionalPositivo(inputValor) {
+   flagDecimal = false
+   inputString = inputValor.toString()
+   for (var i = 0; i < inputString.length; i++)    {
+      var unCaracter = inputString.charAt(i)
+      if (unCaracter == "." && !flagDecimal)  {
+         flagDecimal = true
+         continue
+      }
+      if (unCaracter < "0" || unCaracter > "9")       {
+         return false
+      }
+   }
+   return true
+}
+
+//Verifiva si el dato entrado esta vacio 
+function estaVacio( inputString ) 
+{
+   if ( inputString == null || inputString == "" )   
+   {
+      return true;
+   }
+   return false;
+}
+
+// Verifica el formato fecha
+function esFechaDDMMAAAA( expresion ) 
+{
+   if (expresion == null | expresion == "") return true;
+
+   // este datePat acepta el formato con barras o guiones
+   // DD/MM/AAAA   o    DD-MM-AAAA
+   var datePat = /^(\d{1,2})(\/|-)(\d{1,2})\2(\d{4})$/; 
+
+   // este datePat acepta el formato DDMMAAAA
+   //var datePat = /^(\d{1,2})(\d{1,2})(\d{4})$/;
+   var matchArray = expresion.match(datePat); // es un formato valido?
+
+   if  (matchArray == null ) return false;
+
+   day   = matchArray[1];
+   month = matchArray[3]; // parse date into variables
+   year  = matchArray[4];
+
+   if ( year < 1800 || year > 2030 ) return false;
+
+   if ( month < 1 || month > 12 ) return false;
+
+   if ( day < 1 || day > 31 ) return false;
+
+   if ( ( month==4 || month==6 || month==9 || month==11 ) && day==31 ) return false;
+
+   if ( month == 2 ) 
+   { 
+      var isleap = ( year % 4 == 0 && ( year % 100 != 0 || year % 400 == 0 ) );
+
+      if  ( day > 29 || ( day == 29 && !isleap ) ) return false;
+
+   }
+   return true;  // el dia es valido
+}
+
+function esRangoFechaDesdeHastaInvalido( inputFechaDesde,inputFechaHasta ) 
+{ 
+  //if (String(inputFechaDesde) != "" && String(inputFechaHasta) == "") return true;
+
+  if (String(inputFechaDesde) == "" && String(inputFechaHasta) != "") return true;
+
+  if (String(inputFechaDesde) == "" || String(inputFechaHasta) == "") return false;
+
+  var fechaDesde;
+  var fechaHasta;
+
+  fechaDesde=""+inputFechaDesde.charAt(6)+inputFechaDesde.charAt(7)+inputFechaDesde.charAt(8)+inputFechaDesde.charAt(9)+inputFechaDesde.charAt(3)+inputFechaDesde.charAt(4)+inputFechaDesde.charAt(0)+inputFechaDesde.charAt(1);
+
+  fechaHasta=""+inputFechaHasta.charAt(6)+inputFechaHasta.charAt(7)+inputFechaHasta.charAt(8)+inputFechaHasta.charAt(9)+inputFechaHasta.charAt(3)+inputFechaHasta.charAt(4)+inputFechaHasta.charAt(0)+inputFechaHasta.charAt(1);
+  
+  if( Number( fechaDesde ) > Number( fechaHasta ) ) return true;
+
+  return false;
+}
+
+// Verifica el formato de la horas
+function formatoHora( hora )
+{
+  if ( hora == "" ) return true;
+
+  if ( hora.length < 7 ) return false;
+
+  if ( hora.charAt( 2 ) != ":" ) return false;
+
+  if ( hora.charAt( 5 ) != ":" ) return false;
+
+  for ( i = 0; i < hora.length; i++ )
+  {
+    if ( i == 2 || i == 5 )
+      continue;
+      
+    if ( ! esEnteroPositivo( hora.charAt( i ) ) ) return false;
+  }
+  return true;
+}
+
+function validarRangoFechas( pFechaDesde, pFechaHasta, pMensaje )
+{   
+  if ( ! esFechaDDMMAAAA( pFechaDesde) ) 
+  {
+    alert( "Fecha " + pMensaje + " desde incorrecta" );
+    return false;
+  }
+   
+  if ( ! esFechaDDMMAAAA( pFechaHasta ) ) 
+  {
+    alert( "Fecha " + pMensaje + " hasta incorrecta" );
+    return false;
+  }
+
+  if ( esRangoFechaDesdeHastaInvalido ( pFechaDesde, pFechaHasta ) ) 
+  { 
+    alert( "Fecha " + pMensaje + " desde debe ser menor o igual a fecha " + pMensaje + " hasta" );
+    return false;
+  }
+  return true;  
+}
+
+function actualizaCheckGenericAuxToX( auxObjetoId, objetoId )
+{
+  if ( auxObjetoId.value == "true" )
+    objetoId.checked = true;
+  else
+    objetoId.checked = false; 
+}
+
+function actualizaCheckGenericXToAux( objetoId, auxObjetoId )
+{
+  if ( objetoId.checked )  
+    auxObjetoId.value = "true";
+  else
+    auxObjetoId.value = "false";
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="clase3006.css">
+</head>
+<body>
+	
+	<h2>USO DE DISPLAY FLEX</h2>
+	<b>Display flex</b> lo que hace es que tanto lo elemento de line como los de bloque quede en linea, pero si se especifica un ancho predeterminado, <em>en este caso a la clase caja, este se pierde ya que display flex ajutas sus elementos hijos en base al ancho original de la clase, en este caso principal.</em>
+	
+	<div class="principal">
+		<div class="caja">
+			<p>ANCHO 200px, aca se reduce y no esta tomando como coresponde el ancho</p>
+		</div>
+		<div class="caja"></div>
+		<div class="caja"></div>
+		<div class="caja"></div>
+	</div>
+	<p>Una forma de solucionar eso es que a la clase que tiene display flex se le coloque <b>flex-wrap:wrap</b> (simula un salto de linea como la etiqueta br). <em>El flex-wrap hace que la caja quede con el ancho predeterminado y si se pasa del ancho de la caja padre automaticamente baja los elementos, como en el ekemplo de abajo.</em> </p>
+	<div class="principal1">
+		<div class="caja1">
+			<p>ANCHO DE 150px</p>
+		</div>
+		<div class="caja1"></div>
+		<div class="caja1"></div>
+		<div class="caja1"></div>
+	</div>
+
+
+</body>
+</html>

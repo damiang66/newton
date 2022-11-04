@@ -1,0 +1,14 @@
+.contenedor{
+	background: grey;
+	width: 500px;
+	display: flex;
+	flex-direction: row;
+	/*la linea 5 y 6 le da la propiedad de flexbox que le da a entender a html que lo utiliza como una fila*/
+	flex-wrap: wrap;
+}
+.caja{
+	width: 150px;
+	height: 200px;
+	background-color: lavender;
+	margin: 10px;
+}

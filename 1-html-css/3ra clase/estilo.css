@@ -1,0 +1,23 @@
+body {
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+.texto {
+    height: 300px;
+    width: 300px;
+}
+p {
+    font-style: italic;
+}
+.btn{
+    padding: 35px;
+    background-color: black;
+    color: antiquewhite;
+    display:flexbox;
+    
+}
+.form {
+    background-color: brown;
+
+}

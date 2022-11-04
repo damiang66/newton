@@ -1,0 +1,25 @@
+body{
+	background: black;
+}
+
+div ul li{
+	display: inline;
+}
+
+
+
+.kaka{
+	align-content: center;
+}
+.encabezado{
+	margin-left: 50%;
+}
+.promo{
+	color white;
+}
+.gogo{
+	margin-left: 40%;
+}
+.gogo2{
+	margin-left: 40%;
+}

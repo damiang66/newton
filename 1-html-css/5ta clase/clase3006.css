@@ -1,0 +1,23 @@
+.principal{
+	width: 700px;
+	border: 2px solid black;
+	display: flex;
+}
+.caja{
+	width: 200px;
+	height: 150px;
+	background-color: grey;
+	margin: 20px;
+}
+.principal1{
+	width: 700px;
+	border: 2px solid black;
+	display: flex;
+	flex-wrap: wrap;
+}
+.caja1{
+	width: 150px;
+	height: 150px;
+	background-color: goldenrod;
+	margin: 20px;
+}

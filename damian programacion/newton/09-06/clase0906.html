@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+	<title>formulario</title>
+</head>
+<body>
+    <p>INICIO</p><br>
+    <p>LOGIN</p><br>
+    <p>REGISTRO</p><br>
+    <h2>Dejanos tus datos y nos pondremos en contacto con vos</h2>
+	<form action="" method="">
+		
+		<fieldset class= form style="width:300px">
+			<legend></legend>
+
+			<label for="NOMBRE">
+				<span>Nombre</span>
+			</label>
+			<input type="text" name="nombre" value="" id="nombre" placeholder="Escriba su nombre"  required><br>
+		Email: <input type="mail" name="edad" id="edad"><br>
+		
+		<!--Estudios: <input type="radio" name="estudios">Primario
+		<input type="radio" name="estudios">Secundario
+		<input type="radio" name="estudios">Terciario<br>
+		Correo: <input type="mail" name="correo"><br>
+		Opciones: <input type="checkbox" name="opciones">OPCION1
+		<input type="checkbox" name="opciones">OPCION2
+		<input type="checkbox" name="opciones">OPCION3<br>
+		Color: <input type="color" name="color"><br>
+		Calificar: <input type="range" name="calificar" ><br>-->
+		<h3><b> De que departamento sos</b></h3> 
+        <select name="de que departamento sos">
+             
+					<option value="las heras">Las Heras</option>
+					<option value="ciudad">Ciudad</option>
+					<option value="godoy cruz">Godoy Cruz</option>
+				</select><br>
+				<h2>  <b> Que te parecio la iluminacion del ambiente</b> </h2><br>
+				<input type="checkbox" name="opciones">muy acorde <br>
+		<input type="checkbox" name="opciones">buena pero podria mejorar <br>
+		<input type="checkbox" name="opciones">mala<br>
+        <h2><b>cuando nos visitaste?</b></h2>
+        <input type="date" name ="dia"> <br>
+        <h2><b> Recomendarias el lugar</b></h2>
+        <input type="checkbox" name="opciones">Si <br>
+		<input type="checkbox" name="opciones">No<br>
+        <h2><b> Porque?</b></h2>
+        <input class="texto" type="text" name="texto" value="" id="texto" placeholder="Escriba su opiniom"><br>
+
+		<!--Consulta: <textarea name="consulta" rows="4" cols="8" ></textarea><br>-->
+
+		<!-- FORMAS DE BOTONES -->
+		<input class="btn" type="submit" name="enviar" value="Guardar" onclick="validar()">
+		<!--<button type="submit" name="enviar1">Aceptar</button>-->
+		<input class="btn" type="reset" name="borrar" value="Borrar">
+
+		</fieldset>
+	</form>
+
+
+	
+	
+</body>
+</html>

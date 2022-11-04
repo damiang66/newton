@@ -1,0 +1,490 @@
+body {
+	background:#FFF;
+}
+.divBox {
+	border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.divBox span {
+	display:block;
+}
+
+.divBox img {
+	width:100%;
+	margin-bottom:10px;
+}
+
+.divBox a, .divBox div.sinTextoCopete {
+	display:block;
+	min-height:190px;
+	text-align:center;
+	background:#fff;
+	padding:6px;
+	text-align:left;
+}
+
+.divBoxTramite {
+	height:70px;
+	margin-bottom:10px;
+}
+
+.divBoxTramite.pagos{
+	background:url(../images/accesos/pagos1.png) center center no-repeat #ff7e66;
+}
+.divBoxTramite.solicitudCuit{
+	background:url(../images/accesos/solicitudCUIT.png) center center no-repeat #ff7e66;
+}
+.divBoxTramite.inscripcion{
+	background:url(../images/accesos/constancia.png) center center no-repeat #ff7e66;
+}
+.divBoxTramite.otro{
+	background:url(../images/accesos/consultas.png) center center no-repeat #ff7e66;
+}
+
+.divBox a.tramites .divBoxNombres {
+	/*color:rgb(255, 126, 102) !important;*/
+}
+
+.divBox a.sinTextoCopete, .divBox div.sinTextoCopete {
+	min-height:140px !important;
+}
+
+.divBoxNombres{	
+	font-weight:600;
+	font-size:16px;
+	color:black;
+	line-height: 20px;
+	padding:0 5px;
+}
+.divBoxCopete{
+	font-size:12px;
+	color:#666;
+	margin-top:6px;
+	line-height: 14px;
+	padding:0 5px;
+}
+@media only screen and (min-width: 1300px) and (max-width: 3000px) {
+	.divBox a.sinTextoCopete, .divBox div.sinTextoCopete {
+		min-height: 170px !important;
+	}
+}
+.btnInterior{
+	border:1px solid #66b3ff;
+	background:rgb(0, 114, 188);
+	color:#fff !important;
+	font-size:16px !important;
+	display: inline-block;
+	cursor:pointer;
+	padding:5px 10px;
+	text-align:center;
+	font-weight:normal !important;
+	font-size:15px !important;
+	line-height:20px;
+	margin:5px 0;
+}
+
+#contenidoInterno #cuerpoInternas input.btnInterior {
+	/*padding:7px;*/
+}
+
+/* ------- Cabecera ------- */
+/*.cabeceraContBox {
+	top:0;
+	padding:20px;
+	background:rgba(255,255,255,0.2);
+	height:100%;
+	margin-left:75px !important;
+	display: block;
+color: #fff;
+font-size: 42px;
+text-transform: uppercase;
+font-weight: 100;
+}
+
+@media only screen and (max-width: 767px) {
+	.cabeceraContBox {
+		position:relative !important;
+		margin-left:0 !important;
+	}
+}
+*/
+#cabecera{
+	min-height:90px;
+	margin-bottom:40px;
+}
+#cabecera.monotributo{
+	background:url(/sitio/images/perfiles/bannerPerfilMonotributo.jpg) center center no-repeat #000;
+}
+#cabecera.inscripcion{
+	background:url(/sitio/images/perfiles/bannerPerfilInscripcion.jpg) center center no-repeat #000;
+}
+#cabecera.regimenGeneral{
+	background:url(/sitio/images/perfiles/bannerPerfilRegimenGeneral.jpg) center center no-repeat #000;
+}
+#cabecera.empleados{
+	background:url(/sitio/images/perfiles/bannerPerfilEmpleados.jpg) center center no-repeat #000;
+}
+#cabecera.empleadores{
+	background:url(/sitio/images/perfiles/bannerPerfilEmpleadores.jpg) center center no-repeat #000;
+}
+#cabecera.autonomos{
+	background:url(/sitio/images/perfiles/bannerPerfilAutonomos.jpg) center center no-repeat #000;
+}
+#cabecera.viajeros{
+	background:url(/sitio/images/perfiles/bannerPerfilViajeros.jpg) center center no-repeat #000;
+}
+#cabecera.casasparticulares{
+	background:url(/sitio/images/perfiles/bannerPerfilCasasParticulares.jpg) center center no-repeat #bdad94;
+}
+#cabecera.USAduaneros{
+	background:url(/sitio/images/perfiles/bannerPerfilUSAduaneros.jpg) center center no-repeat #000;
+}
+
+#cabecera.operadoresCE{
+	background:url(/sitio/images/perfiles/bannerPerfiloperadoresCE.jpg) center center no-repeat #000;
+}
+
+/**********MICROSITIOS**********/
+
+#cabecera.bannerMicrositios{
+	background:url(/sitio/images/bannerMicrositios/bannerMicrositios.jpg) center center no-repeat #000;
+}
+
+#cabecera.bannerGananciasBienes{
+	background:url(/sitio/images/bannerMicrositios/bannerGananciasBienes.jpg) center center no-repeat #000;
+}
+
+
+#cabecera.perfilGananciasyBienes{
+	background:url(/sitio/externos/gananciasYBienes/images/background.jpg) center center no-repeat #000;
+}
+
+#cabecera div.uno, #cabecera div.dos {
+	color:#fff;
+	font-size:30px;
+	text-transform:uppercase;
+	font-weight:100;
+}
+#cabecera div.uno{
+	line-height: 0px;
+}
+#cabecera div.dos{
+	line-height: 34px;
+}
+#cabecera div.uno span, #cabecera div.dos span{
+	border-left: 2px solid rgb(0, 114, 188);
+	display: block;
+	padding-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+	#cabecera div.uno, #cabecera div.dos{
+		font-size:33px;
+		line-height: 33px;
+	}
+}
+/* ------- Ruta ------- */
+
+#ruta {
+	font-size:12px;
+	line-height:normal;
+}
+
+#ruta .ancho {
+	border-bottom: 1px solid #ccc;
+	padding-bottom:10px;
+}
+
+
+/* ------- Contenido Interno -------- */
+
+#contenidoInterno {
+	/*background:url(/sitio/externos/sitio/externos/perfiles/images/back.jpg) repeat-y center center;
+	background-size: 100% 100%;*/
+	min-height:500px;
+}
+
+#cuerpoInternas ul {
+    margin: 15px 0;
+}
+
+.destacadosInternas {
+	padding:15px;
+	border:1px solid #71C6E1;
+	background:#E4F9FF;
+}
+.mensajeAlerta {
+	padding:15px;
+	border:1px solid #FF2626;
+	margin:30px 0;
+	padding-left:70px;
+	background:url(/sitio/images/alertIcon.png) no-repeat #FFC6C6;
+	background-position:left;
+}
+
+/* ------- SideBar ------- */
+
+#sidebarInterno .contBoxInfo {
+	padding-right:20px !important;
+}
+
+.contBoxInfo li {
+	padding:5px !important;}
+
+.contBoxInfo {
+	border-bottom: 1px solid rgb(170, 170, 170);
+	height:80%;
+	padding: 2px 2px 0 8px !important;
+	background:#fff;
+}
+
+#sidebarInterno ul {
+	/*overflow:auto;
+	padding: 0 !important;
+	width:100% !important;
+	height:100%;*/
+}
+
+#contenidoInterno h4 span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#contenidoInterno h4 {
+	background: #B9B7AB;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-weight: 600;
+	padding: 0 15px;
+	font-size: 18px;
+	display: table;
+	width: 100%;
+}
+
+.fixHeightBox {
+	height:auto !important;
+}
+
+.fixHeightTitle {
+	height:45px !important;
+}
+
+/* ----------------- Accesos ----------------- */
+
+#accesos{
+	padding: 30px 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background:#eee;
+	margin: 40px 0 0;
+}
+#accesos a span{
+	display:block;
+}
+.btn {
+	cursor:pointer;
+	font-weight:600;
+	font-size:15px;
+	margin:3px 0;
+}
+#btnsBarraSuperior{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.btnBarraSuperior{
+	text-align:center;
+	font-size:13px;
+}
+.btnBarraSuperior a{
+	border:none;
+}
+.btnBarraSuperior img{
+	margin-bottom:7px;
+}
+.tituloAcceso{
+	line-height:16px;
+	color:#000;
+}
+#contenidoAccesos{
+	background:#333;
+}
+.contAcceso{
+	display:none;
+	padding:25px 0 35px;
+	color:#FFF;
+	font-size:13px;
+	font-weight:600;
+}
+.contAcceso h3{
+	color:#BBB;
+	margin:5px 0 20px;
+	text-transform:uppercase;
+	padding: 0 2%;
+}
+.contAcceso ul{
+	list-style:none;
+	padding:0;
+	overflow:hidden;
+	margin:0;
+}
+.contAcceso ul li{
+	float:left;
+	width:29.33%;
+	border-bottom:dotted #FFF 1px;
+	padding-bottom:8px;
+}
+
+.contAcceso ul > li{
+	margin: 2%;
+}
+
+.contAcceso ul li a:hover{
+	color:#0CF;
+}
+
+.bloque {
+	background:#0091BB;
+	color:#FFF;
+	padding:10px 15px;
+}
+
+.titleMenu{
+	font-weight:700;
+	font-size:18px;
+	line-height: 1.5;
+}
+
+#cuerpoInternas, #contenidoInterno #sidebarNovedad  {
+	margin-top:30px;
+}
+
+#cuerpoInternas h2 {
+	font-size: 30px !important/*36px*/;
+	font-weight: 700 /*lighter*/;
+	color: #016887;
+	line-height: 38px /*44px*/;
+	margin-bottom:20px !important;
+}
+
+#cuerpoInternas h3 {
+	color:#888;
+	font-size:18px !important;
+	margin-bottom:20px !important;
+	padding-bottom:10px !important;
+	border-bottom:1px solid #eee !important;
+	font-weight: 600;
+}
+
+#cuerpoInternas h5 {
+	color: #016887 !important;
+	font-size:16px !important;
+	font-weight:600;
+	text-transform:inherit;
+	margin:30px 0 5px !important;
+	background:none;
+	padding:0 !important;
+}
+
+#cuerpoInternas h6 {
+	margin:30px 0 5px !important;
+	text-transform:inherit;
+	font-weight:700;
+}
+
+#cuerpoInternas table, #contenidoGral table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 40px 0;
+	padding:0;
+}
+
+#cuerpoInternas table tr:first-child, #contenidoGral table tr:first-child {
+	background: #71C6E1;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+#cuerpoInternas table tr td, #contenidoGral table tr td {
+    border: 1px solid #CCC !important;
+	font-size: 13px !important;
+	cursor: auto !important;
+	vertical-align:middle;
+}
+
+#cuerpoInternas input[type="text"] {
+	padding:3px;
+}
+
+#cuerpoInternas form {
+	margin:40px 0;
+}
+
+.formulario .formTexto {
+	font-size:11px;
+}
+
+#contMenu{
+	/*border-top: 1px solid #999;
+	margin-top:40px;*/
+}
+
+.menu{
+}
+
+.menu label{
+	font-size:inherit !important;
+}
+
+.menu img{
+	float:left;
+	margin-top:1px;
+}
+
+.menu ul{
+	margin: 15px 0;
+	padding-left:25px;
+}
+
+.menu ul.a{
+    list-style:none;
+}
+
+.menu ul li{
+	list-style-image: url('images/listas/list-arrow-1.png') !important;
+	padding: 5px 10px;
+	line-height: 20px;
+	text-decoration: none;
+	vertical-align: text-top;
+	list-style: none;
+	border-bottom: 1px dotted #bdbdbd;
+}
+
+.menu ul ul{
+	margin:0;
+}
+
+.menu ul ul li{
+}
+
+/* Aplicativos */
+
+#cuerpoInternas .Aplicacion li {
+	line-height:45px;
+	background-position: 0px 25px;
+	font-size:14px;
+}
+#cuerpoInternas .Aplicacion li .btnInterior {
+	margin-left:3px;
+}
+
+#cuerpoInternas .Aplicacion span {
+	font-weight:600;
+}
+
+/* Flecha Subir */
+
+.ir-arriba {
+	z-index:9999 !important;
+}

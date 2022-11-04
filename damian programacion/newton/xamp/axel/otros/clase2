@@ -1,0 +1,7 @@
+<?php
+     $nro = 23;
+     $nro1 = 34;
+
+     echo $nro+$nro1;
+
+?>

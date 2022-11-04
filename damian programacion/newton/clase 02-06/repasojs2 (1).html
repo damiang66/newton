@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<ol id="lista">
+		<li id="primero">Lorem, ipsum dolor sit amet.</li>
+		<li>Consectetur adipisicing elit. Rem, esse.</li>
+	</ol>
+	<!--script>
+		//Agregar nodos al DOM y posicionarlos en donde los necesitemos
+
+		var elemento = document.createElement("li");
+		var contenido = document.createTextNode("Nuevo Texto");
+		elemento.appendChild(contenido);
+		
+
+		//var padre = getElementById("lista");  //la variable padre accede al contenido en gral del Id lista
+		var padre = getElementsByTagName("li")[0].parentNode; //trae todos los elementos li en un array, luego accedemos al primer elemento y nos devuelve el elemento padre
+		padre.appendChild(elemento); //lo agrega al final de la lista
+
+		var padre = getElementsByTagName("li")[0].parentNode; //sseleccionamos toda la lista
+		var primerElemento = getElementsByTagName("li")[0]; //seleccionamos el primer elemento de la lista
+		padre.insertBefore(elemento, primerElemento); //lo agrega al inicio de la lista
+	</script-->
+
+	<!---script>
+		//Modificar elementos del DOM
+
+		var primerElemento = getElementById("primero");
+
+		//Modificar el tecto por innerHTML - nos permite acceder a todo nuestro codigo HTML y ejecutar codigo de HTML
+		primerElemento.innerHTML = "Nuevo Texto";
+
+		//Modificar el texto por textContent - nos permite acceder a todo nuestro codigo HTML sin ejecutar codigo de HTML
+		primerElemento.textContent = "Nuevo Texto";
+	</script-->
+
+	<!--script>
+		//Reemplazar elementos del DOM
+
+		var elemento = document.createElement("li");
+		var contenido = document.createTextNode("Nuevo Texto");
+		elemento.appendChild(contenido);
+
+		var padre = getElementsByTagName("li")[0].parentNode;
+		var referencia =  getElementsByTagName("li")[0];
+		padre.replaceChild(elemento, referencia); //el primer parametro es el elemento que queremos agregar y el ssegundo es el que queremos eliminar
+	</script-->
+
+	<!--script>
+		//Eliminar elementos del DOM
+
+		var elemento = document.createElement("li");
+		var contenido = document.createTextNode("Nuevo Texto");
+		elemento.appendChild(contenido);
+
+		var padre = getElementsByTagName("li")[0].parentNode;
+		var referencia =  getElementsByTagName("li")[0];
+		padre.removeChild(referencia);
+	</script-->
+</body>
+</html>

@@ -1,0 +1,107 @@
+.container{
+
+width: 1200px;
+height:700px;
+}
+.elemento{
+    margin-bottom:100px;
+}
+.elemento img{
+    width: 1200px;
+
+    height:200px;
+    position: absolute;
+}
+.elemento h1{
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: relative;
+   
+   
+}
+span{
+   text-align: center;
+   position: relative;
+  
+   
+}
+
+   
+   
+    
+
+
+.nav {
+   
+    margin-top: 10px;
+   display: flex; 
+}
+h2{
+    text-align: center;
+   
+    margin-bottom: 20px;
+    
+    
+}
+.seccion{
+   
+    width: 250px;
+    height: 250px;
+    
+    
+    margin: auto;
+}
+
+
+.nav .seccion i{
+    
+   padding: 8px;
+    
+    border: 2px solid;
+    border-radius: 100%;
+    margin-left: 40%;
+    /* background-color: red;
+    color:yellow */
+}
+.fa-solid.fa-rocket{
+    background-color: red;
+    color:yellow
+}
+.fa-solid.fa-cubes{
+    background-color: blue;
+    color:yellow
+}
+.fa-solid.fa-arrow-up-right-dots{
+    background-color: yellow;
+    color:red;
+}
+.fa-solid.fa-comments{
+    background-color: blue;
+    color:yellow
+}
+
+.nav .seccion h3{
+    text-align: center;
+}
+.nav .seccion p{
+    text-align: center;
+}
+@media(max-width:800px){
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .nav{
+        display: block;
+    }
+    .seccion {
+        width: 250px;
+        height: 250px;
+        margin:0;
+    }
+    .elemento img{
+        width: 100%;
+        height: 300px;
+    }
+}

@@ -1,0 +1,72 @@
+/*.contenedor{
+	width: 600px;
+	height: 150px;
+	border: 1px solid black;
+	position: relative;
+}
+.elemento{*/
+	/*float: left;*/
+	/*width: 100px;
+	height: 100px;
+	background-color: gray;
+
+	position: absolute;
+	top: 5px;
+	left: 50px;
+
+}
+.elemento1{*/
+	/*float: right;*/
+	/*width: 100px;
+	height: 100px;
+	background-color: gray;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}*/
+header{
+	width: 1300px;
+	height: 60px;
+	background-color: darkred;
+	position: fixed;
+	z-index: 10;
+
+}
+h2{
+	width: 300px;
+	position: absolute;
+	
+	left: 30px;
+	font-family: 'Work Sans', sans-serif;
+	color: white;
+}
+nav{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+
+}
+nav a{
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+}
+nav a:hover{
+	background-color: white;
+	color: darkred;
+}
+img{
+	width: 500px;
+	position: relative;
+	top: 35px;
+}
+img:hover{
+	width: 600px;
+	transition: 2s ease;
+}
+label{
+	position: absolute;
+	top: 300px;
+	left: 20px;
+	width: 400px;
+}

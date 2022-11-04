@@ -1,0 +1,41 @@
+form{
+    width: 400px;
+    background-color: purple;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+.input{
+    background-color: #c33fe0;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+}
+.icono{
+    background-color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+}
+i{
+margin-left: 3px;
+color:black;
+}
+input{
+    border: none;
+    background-color:#c33fe0;
+    margin-left: 5px;
+}
+input::placeholder{
+    color: white;
+}
+button{
+    display: block;
+    border: 1px solid #c33fe0;
+    background-color:#c33fe0;
+    margin: 20px auto;
+
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}

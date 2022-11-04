@@ -1,0 +1,133 @@
+/* =Footer
+-----------------------------------------------------------------------------*/
+
+#footer {
+	background:#eaeaea;
+	padding:15px 0;
+	color:#333;
+	text-align:center;
+	border-top: 1px solid #999;
+}
+
+#footer img {
+	margin:0 20px;
+}
+
+#footerInstitucional {
+	/*background: url(../images/BG.png) repeat left top #222;*/
+	background-color:#0072bc !important;
+	background-image:none !important;
+	padding:25px 0 50px;
+	color:#fff;
+	font-family: "Open Sans",sans-serif;
+}
+
+#footerInstitucional h3{
+	color:#fff;
+	font-size:17px;
+	font-weight:400;
+	margin:0 0 10px;
+	border-bottom:1px solid #777;
+	padding-bottom:2px;
+}
+
+#footerInstitucional ul {
+	margin:0;
+	padding:0;
+}
+
+#footerInstitucional ul li {
+	/*padding: 1px 15px;*/
+}
+
+#footerInstitucional .arrowBlanco2 li {
+	background-image: url(/sitio/css/images/listas/list-arrow-1-Blanco.png);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	list-style: none;
+	padding: 5px 20px;
+	line-height: 25px;
+	text-decoration: none;
+	vertical-align: text-top;
+	border-bottom: 1px dotted #3A3A3A;
+	font-family: "Open Sans",sans-serif;
+}
+
+#footerInstitucional .arrowBlanco2 li a {
+	color:#fff;
+	font-size:13px;
+	font-weight:normal;
+}
+
+#footerInstitucional a:hover {
+	color:#0CF;
+}
+
+
+#footerInstitucional .arrowBlanco2 li {
+	border-bottom: 1px dotted #818286 !important;
+}
+
+#institucional00, #institucional01, #institucional02, #institucional03 {
+	margin-top:20px;
+}
+
+#redesSocialesFooter {
+}
+
+.redesSociales {
+	overflow:hidden;
+	text-align:right;
+	margin-top:5px;
+}
+
+.redesSociales a {
+	width:28px;
+	height:28px;
+	margin-left:5px;
+	display:inline-block;
+}
+
+.facebook {
+	background:url(images/redesSociales/facebook.png);
+}
+
+.twitter {
+	background:url(images/redesSociales/twitter.png);
+}
+
+.youtube {
+	background:url(images/redesSociales/youtube.png);
+}
+
+.facebook:hover {
+	background:url(images/redesSociales/facebookG.png);
+}
+
+.twitter:hover {
+	background:url(images/redesSociales/twitterG.png);
+}
+
+.youtube:hover {
+	background:url(images/redesSociales/youtubeG.png);
+}
+
+@media only screen and (max-width: 480px) {
+	#footer img {
+		width:auto !important;
+	}	
+}
+
+@media only screen and (max-width: 768px) {
+	#footer img {
+		width:100px;
+	}
+	#redesSocialesFooter {
+		float: left;
+		margin-top: 10px;
+		width:100%;
+	}
+	.redesSociales {
+		text-align:left;
+	}
+}

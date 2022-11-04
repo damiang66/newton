@@ -1,0 +1,14 @@
+body{
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.btn{
+    padding: 20px;
+    background-color: black;
+    color:aliceblue;
+    border: solid 5px;
+    
+    
+}

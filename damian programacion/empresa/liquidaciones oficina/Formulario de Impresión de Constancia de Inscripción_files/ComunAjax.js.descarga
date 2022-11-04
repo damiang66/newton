@@ -1,0 +1,84 @@
+var ajax;
+var nroIteracion = 0;
+var bandera = false;
+function initAjax()
+{
+  // Creamos el control XMLHttpRequest segun el navegador
+  if( window.XMLHttpRequest )
+    ajax = new XMLHttpRequest(); // No Internet Explorer
+  else
+    ajax = new ActiveXObject("Microsoft.XMLHTTP"); // Internet Explorer
+}
+function funcionCallback()
+{ 
+  // Comprobamos si la peticion se ha completado (estado 4)
+  if( ajax.readyState == 4 )
+  { 
+    // Comprobamos si la respuesta ha sido correcta (resultado HTTP 200)
+    if( ajax.status == 200 )
+    { 
+      bandera = true;
+      compositeFunction();
+    }
+  }
+}
+function actualizaEntorno()
+{   
+  compositeFunction()
+}
+function compositeFunction()
+{
+  // Escribimos el resultado en la pagina HTML mediante DHTML
+  if ( bandera )
+  {
+    if ( nroIteracion == 1 ) 
+    {     
+      if (window.parent.document.getElementById("miTituloForm") != null)
+    	window.parent.document.getElementById("miTituloForm").innerHTML = "<b>"+ajax.responseText+"</b>";      
+    }
+    else if ( nroIteracion == 2 )
+    { 
+      if (window.parent.document.getElementById("miUrlAyuda") != null)
+    	window.parent.document.getElementById("miUrlAyuda").value = ajax.responseText;                  
+    }
+    bandera = false;
+  }  
+  
+  nroIteracion++;
+
+  if ( nroIteracion == 1 )
+    actualizaMensaje();
+  else if ( nroIteracion == 2 ) 
+    actualizaUrlAyuda();  
+  else 
+    return;
+}
+function actualizaMensaje()
+{
+  initAjax();
+    
+  var contexto = document.getElementById( "miContexto" ).value;
+  var idMsg    = document.getElementById( "idMensaje" ).value;
+
+  // Almacenamos en el control al funcion que se invocara cuando la peticion
+  // cambie de estado	
+  ajax.onreadystatechange = funcionCallback;
+
+  // Enviamos la peticion
+  ajax.open( "POST", contexto + "/jsp/Mensajes.jsp?idMensaje=" + idMsg, true );
+  ajax.send( "" );
+}
+function actualizaUrlAyuda()
+{
+  initAjax();
+ 
+  var contexto = document.getElementById( "miContexto" ).value;
+   
+  // Almacenamos en el control al funcion que se invocara cuando la peticion
+  // cambie de estado	
+  ajax.onreadystatechange = funcionCallback;
+
+  // Enviamos la peticion
+  ajax.open( "POST", contexto + "/jsp/UrlHelp.jsp?idAyuda=1", true );
+  ajax.send( "" );
+}

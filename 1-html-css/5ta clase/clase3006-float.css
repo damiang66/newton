@@ -1,0 +1,26 @@
+.caja{
+	width: 200px;
+	height: 150px;
+	background-color: grey;
+	margin: 20px;
+	float: left;
+}
+
+hr,p#dos{
+	/*overflow: hidden;*/
+	clear: both;
+}
+.caja1{
+	width: 150px;
+	height: 150px;
+	background-color: goldenrod;
+	margin: 20px;
+	float: left;
+	
+}
+footer{
+	width: 750px;
+	clear: both;
+	background-color: black;
+	color: white;
+}

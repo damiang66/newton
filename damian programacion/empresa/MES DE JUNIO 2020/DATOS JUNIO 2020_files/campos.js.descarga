@@ -1,0 +1,112 @@
+$(function(){
+/***************************************************************************/
+	 $("body").on("keypress", ".soloNumeros", function(evento) {
+		var kcode = (evento.which) ? evento.which : evento.keyCode;
+		/*console.log(kcode);
+		console.log(String.fromCharCode(kcode));
+		console.log(String.fromCharCode(kcode).length);*/
+		return ((kcode > 47 && kcode < 58) || (kcode > 36 && kcode < 41) || kcode == 8 || kcode == 0 || ((kcode == 99 || kcode == 118) && (evento.ctrlKey === true || evento.metaKey === true)));
+	});
+	
+	$("body").on("change", ".soloNumeros", function() {
+		var value = $(this).val();
+		$(this).val(value.replace(/[^0-9]/g, ''));
+	});
+	
+	$("body").on("paste", ".soloNumeros", function(evento) {
+		try {
+			var pastedData;
+			if (typeof evento.clipboardData === 'undefined') {
+				pastedData = window.clipboardData.getData('Text');
+			} else {
+				pastedData = evento.originalEvent.clipboardData.getData('text/plain');
+			}
+			var valor = pastedData.replace(/[^0-9]/g, '');
+			if (pastedData != valor) {
+				if ($(this).prop("maxlength") != null)
+					valor = valor.substr(0, $(this).prop("maxlength"));
+				$(this).val(valor);
+				return false;
+			}
+		} catch (e) {
+			var campo = this;
+			setTimeout(function() {
+				var value = $(campo).val();
+				$(campo).val(value.replace(/[^0-9]/g, ''));
+			}, 100);
+		}
+	});
+
+	$("body").on("keypress", ".soloNumerosConDecimales", function(evento) {
+		var kcode = (evento.which) ? evento.which : evento.keyCode;
+		return ((kcode > 43 && kcode < 57) || (kcode > 47 && kcode < 58) || (kcode > 36 && kcode < 41) || kcode == 8 || kcode == 0 || ((kcode == 99 || kcode == 118) && (evento.ctrlKey === true || evento.metaKey === true)));
+	});
+	
+	$("body").on("change", ".soloNumerosConDecimales", function() {
+		var value = $(this).val();
+		$(this).val(value.replace(/[^0-9.,\-]/g, ''));
+	});
+	
+	$("body").on("paste", ".soloNumerosConDecimales", function(evento) {
+		try {
+			var pastedData;
+			if (typeof evento.clipboardData === 'undefined') {
+				pastedData = window.clipboardData.getData('Text');
+			} else {
+				pastedData = evento.originalEvent.clipboardData.getData('text/plain');
+			}
+			var valor = pastedData.replace(/[^0-9.,\-]/g, '');
+			if (pastedData != valor) {
+				if ($(this).prop("maxlength") != null)
+					valor = valor.substr(0, $(this).prop("maxlength"));
+				$(this).val(valor);
+				return false;
+			}
+		} catch (e) {
+			var campo = this;
+			setTimeout(function() {
+				var value = $(campo).val();
+				$(campo).val(value.replace(/[^0-9.,\-]/g, ''));
+			}, 100);
+		}
+	});
+
+	// soloTexto = cualquier cosa entre 0 y high ascii (255) - necesito permitir enter y caracteres especiales, pero no emoji ni caracteres japoneses, por ejemplo
+	$("body").on("keypress", ".soloTexto", function(evento) {
+		var kcode = (evento.which) ? evento.which : evento.keyCode;
+		/*console.log(kcode);
+		console.log(String.fromCharCode(kcode));
+		console.log(String.fromCharCode(kcode).length);*/
+		return (kcode >=0 && kcode <= 255);
+	});
+	
+	$("body").on("change", ".soloTexto", function() {
+		var value = $(this).val();
+		$(this).val(value.replace(/[^\u0000-\u00FF]/g, ''));
+	});
+	
+	$("body").on("paste", ".soloTexto", function(evento) {
+		try {
+			var pastedData;
+			if (typeof evento.clipboardData === 'undefined') {
+				pastedData = window.clipboardData.getData('Text');
+			} else {
+				pastedData = evento.originalEvent.clipboardData.getData('text/plain');
+			}
+			var valor = pastedData.replace(/[^\u0000-\u00FF]/g, '');
+			if (pastedData != valor) {
+				if ($(this).prop("maxlength") != null)
+					valor = valor.substr(0, $(this).prop("maxlength"));
+				$(this).val(valor);
+				return false;
+			}
+		} catch (e) {
+			var campo = this;
+			setTimeout(function() {
+				var value = $(campo).val();
+				$(campo).val(value.replace(/[^\u0000-\u00FF]/g, ''));
+			}, 100);
+		}
+	});
+/***************************************************************************/
+});

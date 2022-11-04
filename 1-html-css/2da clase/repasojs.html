@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<h1 id="titulo">TTítulo del SSitio Web</h1>
+	<div id="subtitulo"></div>
+	<p>1. Lorem ipsum <b>dolor</b> sit amet, consectetur adipisicing elit. Dignissimos tempora ipsa similique sapiente voluptatum. Aliquid, cum. Corporis architecto provident quis, nihil asperiores? Nulla eius explicabo consectetur quam? Facilis, laborum eligendi!</p>
+
+	<p id="segundo">2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis officiis magni esse aperiam aut. Aspernatur perferendis id, tempore tempora delectus, molestias nulla ratione! Ipsa explicabo veniam magni nihil reiciendis, dolorem.</p>
+
+	<p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, eligendi eum, distinctio eaque commodi quia magnam, debitis, facere quos quibusdam illum perspiciatis aliquam laborum sequi delectus amet labore inventore quasi!</p>
+
+	<!--script>
+		//Introducción al DOM - usar elementos de HTML en JavaScript
+
+		//elegir el elemento desde el nombre de la etiqueta
+		var elementosP = document.getElementsTagName("p");
+
+		//elegir el elemento desde el id
+		var segundoParrafo = document.getElementById("segundo");
+	</script-->
+
+	<script>
+		//Crear Nodos en DOM (crear un elemento - etiqueta h2 en este caso- desde JavaScript a HTML, permite el dinamismo en la pagina,
+		//)
+
+		//1.- Crear el elemento
+		var elemento = document.createElement("h2");
+		//2.- Crear un nodo de texto
+		var contenido = document.createTextNode("Este es el Subtitulo");
+		//3.- Añadir el nodo de texto al elemento
+		elemento.appendChild(contenido); //aqui agregamos el contenido al elemento
+		//4.- Agregar aributos al elemento
+		elemento.setAttribute("align", "center"); //primero elegimos el tipo de atributo y en el segundo el valor del mismo
+		//5.- Agregar el elemento al documento
+		document.getElementById("subtitulo").appendChild(elemento);
+		//getElementById busca y obtiene el elemento y con el appendChild agregamos el contenido del mismo
+
+		document.body.appendChild(elemento);
+		//agrega el elemento al final del body
+	</script>
+</body>
+</html>

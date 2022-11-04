@@ -1,0 +1,32 @@
+.otrocontenedor{
+	position: relative;
+	border: 2px solid blueviolet;
+	height: 500px;
+	width: 600px;
+}
+.cuadro{
+	width: 100px;
+	height: 100px;
+	background: saddlebrown;
+	position: absolute;
+}
+#uno{
+	top: 5px;
+	left: 5px;
+}
+#uno:hover{
+	background-color: green;
+	width: 130px;
+}
+#dos{
+	top: 5px;
+	left: 400px;
+}
+#tres{
+	top: 300px;
+	left: 5px;
+}
+#cuatro{
+	top: 300px;
+	left: 400px;
+}

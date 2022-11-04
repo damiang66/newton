@@ -1,0 +1,63 @@
+header{
+    width: 1200px;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: aqua;
+}
+.menu{
+    /*display: block;*/
+    font-size: 22px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    line-height: 60px;/*como si fuera un margin-top*/
+
+}
+.menu1{
+    display: block;
+    font-size: 22px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    line-height: 60px;/*como si fuera un margin-top*/
+
+}
+.menu:hover{
+    background-color: white;
+    color:aqua
+}
+#responsive{
+    display: none;
+}
+@media (max-width:600px){
+    header{
+        width: 100%;
+    }
+    nav{
+        width: 100%;
+        height: 100%;
+
+    }
+    .nav{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+
+    }
+    .menu{
+   display: none
+    }
+  
+    
+    #responsive{
+        display: inline;
+        font-size: 22px;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        line-height: 60px;/*como si fuera un margin-top*/
+    }
+
+}

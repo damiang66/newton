@@ -1,0 +1,25 @@
+function llamarVentanaAyuda(url)
+{ 
+  if ( url == "" )
+    alert( "No esta disponible la ayuda" );
+  else
+    MiVentana=open( url, "Ayuda",'scrollBars=yes, locationBar=no, status=no,  toolBar=no, menuBar=no, directories=no, copyHistory=no, resizable=yes, fullScreen=no');
+}
+function llamarSabana(form,idPersona) 
+{ 
+  form.action=document.getElementById( "miContexto" ).value + "/ContribuyenteAction.do?id="+idPersona;
+  form.submit();
+}
+function llamarSabanaPorDocumento(form,documento)
+{
+  form.action=document.getElementById( "miContexto" ).value +"/DirectaAction.do?directaForm.documento="+documento;
+  form.submit();
+}
+function confirmacion()
+{
+  return confirm( "Esta seguro de realizar la operaci\363n ?" ); 
+}
+function cerrarParent(){
+    if ( confirm( "Desea salir de la aplicaci\363n ?" ) )
+      parent.close();    
+}

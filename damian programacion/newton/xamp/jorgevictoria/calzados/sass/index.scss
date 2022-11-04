@@ -1,0 +1,764 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@300;500;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,300;0,500;0,600;1,100;1,300;1,500;1,600&display=swap');
+
+/* Variables */
+
+:root {
+    --principal: #15304a;
+    --secondary: #ffff;
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: "Bowly One SC", cursive;
+}
+
+/* Normalize */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globals */
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    color: var(--secondary);
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: var(--secondary);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+    display: inline-block;
+}
+
+/* HELPERS */
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.maxwidht{
+    width: 32%;
+}
+
+/* HEADER & NAVBAR*/
+
+header {
+    background-color: var(--principal);
+
+
+&.navbar {
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+&.logo {
+    flex-basis: 30%;
+    
+}
+&.menu {
+    flex-basis: 40%;
+    justify-content: space-between;
+    &.menu__item {
+        border: 2px solid var(--principal);
+        transition: all .3s ease-in-out;
+        
+    }
+
+    &.menu__item:hover {
+        border-color: var(--secondary);
+              
+        
+    }  
+    
+}
+
+.menu .menu__item .menu__link {
+    font-size: 1.8em;
+    padding: 1rem;
+    
+    
+    }
+
+}
+
+.picture__img{
+    height: 7rem;
+    padding: 0.1rem;
+    border-radius: 15%;
+    
+}
+
+
+.navbar .menu__item .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--principal);
+}
+
+.navbar .menu .menu__item:hover .sub-menu {
+    display: block;
+   
+}
+
+.menu__item .sub-menu .sub-menu__link {
+    padding: 1rem;
+    font-size: 1.6em;
+    transition: all .3s ease-in-out;
+    color: #ffff;
+}
+
+.menu__item .sub-menu .sub-menu__link:hover {
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--principal);
+    border: 1px solid var(--principal);
+    color: #ffff;
+       
+}
+
+/* MAIN SECTION */
+
+.presentation {
+    gap: 2rem;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.presentation__picture {
+    flex-basis: 50%;
+    min-width: 320px;
+}
+
+.presentation__img {
+    width: 100%;
+}
+
+.presentation__description {
+    flex-basis: 50%;
+    color: var(--secondary);
+}
+
+.presentation__container p {
+    font-size: 3.2em;
+}
+
+.presentation__container h1 {
+    font-size: 6.8em;
+}
+
+
+/* Productos */
+
+.productos{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: (3, 1fr);
+gap: 1rem;
+
+}
+
+.productos__seccion{
+    display: flex;
+    flex-direction: row;
+    
+  
+}
+
+@mixin itemprod($max-width,$max-height,$margin) {
+    max-width: $max-width;
+    max-height: $max-height;
+    margin: $margin;
+}
+
+.productos__seccion__item{
+  @include itemprod(100%, 100%, .5rem);
+  
+  
+}
+
+
+.index_picture{
+    margin-bottom: 1rem;
+}
+
+.index_picture_img {
+    margin-bottom: 1rem;
+    
+}
+
+$redes:(
+    instagram: #55acee,
+    facebook:#3a5795,
+    email: #C25E30,
+);
+
+@each $red, $color in $redes{
+    .btn--#{$red}{
+        background-color: $color;
+    }
+ }
+
+
+
+
+ .menu__link { 
+    font-size: 1.8em;
+    padding: 1rem;
+    color: #ffff;
+    &--active{
+        @extend .menu__link; 
+        border-bottom: 2px solid crimson;
+    }
+    }
+
+
+    @mixin itemprod($max-width,$max-height,$margin) {
+        max-width: $max-width;
+        max-height: $max-height;
+        margin: $margin;
+    }
+    
+    .productos__seccion__item{
+      @include itemprod(100%, 100%, .5rem);
+    }
+
+
+
+.quienes-somos{
+margin: 1rem;
+}
+
+
+.quienes-somos_section{
+float: right;
+width: 48%;
+margin: 1rem;
+}
+            
+.quienes-somos_aside{
+float: left;
+margin: 1rem; 
+width: 48%;          
+}
+
+.quienes-somos_section_parrafo{
+    font-size: 1.5rem;
+
+  
+}
+
+/* FOOTER */
+
+footer {
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--principal);
+}
+
+.footer_p {
+    text-align: center;
+    
+    color: #ffff;
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+h1,h2,h3,h4,h5,h6,p{
+    color: var(--principal);
+}
+
+
+
+.form-horizontal{
+    margin-left: 27rem;
+ 
+}
+
+.mapa{
+    margin: 2rem;
+
+}
+
+.carusellsize{
+ height: 60rem;
+ width: 60rem;
+
+}
+
+.portada_img{
+    float: left;
+    
+}
+
+.portada_description{
+    float: right;
+    width: 45%;
+   
+}
+
+
+.index_description{
+    float: right;
+    width: 47%;
+    height: 100%;
+    margin: 1.5rem;
+    padding-top: 4rem;
+    padding-left: 3rem;
+}
+
+
+.index_img{
+float: left;
+width: 47%;
+margin: 1rem;
+}
+
+.logo_portada{
+    
+    display: block;
+    margin-right: auto;
+    margin-left: auto;  
+    width: 70%; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+   
+
+}
+
+.index_picture_img {
+    margin-bottom: 1rem;
+    border-radius: 10%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;   
+       
+}
+
+
+.index_h2{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 3.5rem;
+}
+
+
+.index_p{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 3.5rem;
+    text-align: justify;
+}
+
+.index_h3{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev{
+    filter: invert(100%);
+}
+
+.qs_inicio{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: crimson;
+}
+
+.caja_productos{
+    border: solid var(--principal);
+    border-radius: 5%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.caja_description{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+.caja_description1{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.caja_precio{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1.5rem;
+    text-align: center;
+    color: crimson;
+}
+
+
+.producto_a{ 
+    text-decoration: none; 
+    color: var(--principal);
+    
+}
+
+.producto_a:hover{
+    text-decoration: none;
+    color: var(--principal);
+    
+}
+
+#producto_a{ 
+    text-decoration: none; 
+    color: var(--principal);
+    
+}
+
+#producto_a:hover{
+    text-decoration: none;
+    color: var(--principal);
+    
+}
+
+.justificar{
+    text-align: justify !important;
+}
+ 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: var(--principal) !important;
+}
+
+.footer_p {
+    text-align: center;
+    
+    color: #ffff;
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    display: block;
+    margin: auto;
+   
+}
+
+
+.redes_item{
+    margin-right: 2rem;
+   
+}
+
+#duenos{
+   width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .index_description{
+        float: none;
+        
+        margin: .5rem;
+        padding-top: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        display: inline;
+        
+    }
+    
+    .index_img{
+        float: none;
+        
+        margin: 1rem;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        }
+
+        .index_picture_img {
+            margin-bottom: 1rem;
+            border-radius: 10%;
+            width: 100%;
+           
+        }
+
+       
+        .index_p{
+            margin: 1rem;
+           
+        }
+
+        .index_h2{
+            margin: 1rem;
+            
+        }
+
+        .logo{
+            
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+
+        .footer_p {
+            
+            font-weight: 400;
+            font-size: 1.42rem;
+            display: block;
+            margin: auto;
+           
+        }
+        
+        
+        .redes_item{
+            margin-right: 1rem;
+            margin-bottom: auto;
+            margin-top: auto;
+           
+        }
+        .menu{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .quienes-somos_section{
+        float: none;
+        width: 100%;
+        
+        }
+                
+        .quienes-somos_aside{
+        float: none;
+        width: 100%;
+        
+        }
+    
+ 
+    .quienes-somos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja_description1{
+        margin: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+    #zapa{
+        width: 75%;
+     }
+
+     #carouselExampleCaptions{
+         width: 40rem;
+         margin-top: 5rem;
+     }
+     .w-90{
+         width: 40rem;
+     }
+.mapa{
+    width: 40rem;
+}
+.form-horizontal{
+    width: 10rem;
+   /* float: right;*/
+    }
+    #form{
+        width: 50rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .index_description{
+        float: none;
+        
+        margin: .5rem;
+        padding-top: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        display: inline;
+        
+    }
+    
+    .index_img{
+        float: none;
+        
+        margin: 1rem;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        }
+
+
+        .index_p{
+            margin: 1rem;
+           
+        }
+
+        .index_h2{
+            margin: 1rem;
+            
+        }
+
+        .logo{
+            
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+                    
+        .menu{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .quienes-somos_section{
+        float: none;
+        width: 100%;
+        
+        }
+                
+        .quienes-somos_aside{
+        float: none;
+        width: 100%;
+        
+        }
+    
+ 
+    .quienes-somos{
+        display: flex;
+        flex-direction: column;
+    }
+    #zapa{
+        width: 75%;
+     }
+
+     #carouselExampleCaptions{
+        width: 50rem;
+        margin-top: 3rem;
+    }
+    .w-90{
+        width: 50rem;
+    }
+    .form-horizontal{
+        width: 100%;
+        float: right;
+       
+        margin-left: -20rem;
+        margin-right: 8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {
+
+    .index_description{
+        float: none;
+        
+        margin: .5rem;
+        padding-top: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        display: inline;
+        
+    }
+    
+    .index_img{
+        float: none;
+        
+        margin: 1rem;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        }
+
+        .quienes-somos_section{
+            float: none;
+            width: 100%;
+            
+        }
+                    
+        .quienes-somos_aside{
+            float: none;
+            width: 100%;
+            
+        }
+        #duenos{
+            width: 76%;
+         }
+
+         #carouselExampleCaptions{
+          
+            margin-bottom: 3rem;
+        }
+        .form-horizontal{
+            width: 100%;
+            float: right;
+            margin-left: 150rem;
+            
+            
+        }
+        .formulario{
+            margin-left: 10rem;
+            width: 100%;
+        }
+}

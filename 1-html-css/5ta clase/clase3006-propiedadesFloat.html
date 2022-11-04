@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="clase3006-float.css">
+</head>
+<body>
+
+	<h2>USO PROPIEDAD FLOAT</h2>
+	<p>En este caso no es necesario que lo elemento se encuentren en un elemento padre. Se puede utilizar <b>float: letf o float: rigth.</b><br></p>
+	<div class="caja">
+			<p>ANCHO 200px, aca se reduce y no esta tomando como coresponde el ancho</p>
+	</div>
+	<div class="caja"></div>
+	<div class="caja"></div>
+	<div class="caja"></div>
+
+<hr>
+	<h2>FLOAT,CLEAR,OVERFLOW</h2>
+	<p id="dos">El problema de usa esta propiedad es que si tenemos algun otro elemento debajo, hace que se posicione en la posicion actual del primer elemnto, esto sucede porque el float hace que los elementos queden por ancima(o flotando) de los demas elemento. La solucion a esto es colocar la propiedad <b>clear:both; o overflow:hidden;</b>, esto hace que elimine por asi decirlo, al float y se mantenga en su posicion original</p>
+
+	<div class="caja1">
+			<p>ANCHO DE 150px</p>
+	</div>
+	<div class="caja1"></div>
+	<div class="caja1"></div>
+	<div class="caja1"></div>
+	<footer>OTRO ELEMENTO</footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+.container{
+	width: 1300px;
+	display: flex;
+	background-color: whitesmoke;
+}
+
+.noticias{
+	width: 70%;
+}
+
+.primero #fecha{
+	float: left;
+}
+
+.primero #autor{
+	float: right;
+}
+
+.segundo{
+	float: left;
+	width: 350px;
+	height: 650px;
+	background-color: rosybrown;
+	color: white;
+	margin: 10px;
+	padding: 10px;
+}
+
+
+.segundo #fecha{
+	float: left;
+}
+
+.segundo #autor{
+	float: right;
+}
+
+
+aside{
+ 	width: 30%;
+}
+
+li{
+	list-style: none;
+}
+
+li a{
+	text-decoration: none;
+}
+

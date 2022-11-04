@@ -1,0 +1,85 @@
+function formatImporte(numero) {
+	if (!!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function')) {
+		return numero.toLocaleString("it", { "minimumFractionDigits":2 }); // le pongo italiano en lugar de español porque por una norma ridícula de la RAE para números de 4 cifras (y sólo de 4 cifras) en español no se pone separador de miles (!?!?!?). En italiano tienen sentido común y no existe esa excepción
+	} else {
+		return ((numero.toFixed(2)+"").replace(".",","));
+	}
+}
+
+var gMeses = [
+				"Enero",
+				"Febrero",
+				"Marzo",
+				"Abril",
+				"Mayo",
+				"Junio",
+				"Julio",
+				"Agosto",
+				"Septiembre",
+				"Octubre",
+				"Noviembre",
+				"Diciembre"
+			];
+
+function alerta(titulo, texto, ancho /* opcional */, icono /* opcional */) {
+	if (ancho === undefined)
+		ancho = 330;
+	if (icono === undefined)
+		icono = "ui-icon-alert";
+	
+	$('<div title="'+titulo+'"><span class="ui-icon '+icono+'" style="float:left; margin:0 7px 20px 0;"></span>'+texto+'</div>').dialog({
+		show: 'fade',
+		width: ancho,
+		dialogClass: 'dialog-con-sombra',
+		resizable: false,
+		buttons: {
+			"Aceptar": function() {
+				$(this).dialog("option","hide","fade");
+				$(this).dialog("close");
+			}
+		},
+		modal: true
+	});
+	$('.ui-dialog :button').blur();
+}
+
+function mostrarDialogConfirmacion(titulo, texto, tituloBotonAceptar, funcionAceptar, ancho /* opcional */, icono /* opcional */) {
+	if (ancho === undefined)
+		ancho = 330;
+	if (icono === undefined)
+		icono = "ui-icon-alert";
+	
+	$('<div title="'+titulo+'"><span class="ui-icon '+icono+'" style="float:left; margin:0 7px 20px 0;"></span>'+texto+'</div>').dialog({
+		show: 'fade',
+		width: ancho,
+		dialogClass: 'dialog-con-sombra',
+		resizable: false,
+		buttons: [
+  		{
+			text:"Cancelar",
+			click: function() {
+				$(this).dialog("option","hide","fade");
+				$(this).dialog("close");
+			}
+		},
+		{
+			text:tituloBotonAceptar,
+			click: function() {
+				$(".ui-dialog-buttonpane button").attr("disabled",true);
+				$(this).dialog("option","hide","fade");
+				$(this).dialog("close");
+				if (funcionAceptar !== undefined) {
+					if ((typeof funcionAceptar) !== "function")
+						console.log("Función de confirmación inválida");
+					else
+						funcionAceptar();
+				}
+				setTimeout('$(".ui-dialog-buttonpane button").attr("disabled",false);', 1200);
+			}
+		},
+		],
+		modal: true
+	});
+	$('.ui-dialog :button').blur();
+}
+

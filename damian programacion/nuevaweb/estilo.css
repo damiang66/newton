@@ -1,0 +1,290 @@
+*{
+   
+    box-sizing: border-box; /* cambiar los border por defecto */
+    margin: 0; /* sin margen*/
+    padding: 0; /* sin espaciado*/
+}
+body {
+    background: black ;/* color de fondo de la pagina */
+    /* sacado de la pagina hero patterns son fondos para paginas */
+    background-color: #000; /* cambiar el color de fondo*/
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: #1e272e;
+    color: #fff;
+    font-size: 16px;
+    font-family:"osvald", sans-serif; /* le agrego la fuente osvald que pegue el link en el heard */
+
+  }
+  
+  a {
+    color: #ffffff; /* color de la letra de las listas */
+    text-decoration: none; /* sacar el subrayado */ 
+  }
+  ul {
+      list-style: none ; /* recetea el estilo de la lista */
+  }
+  .container { 
+      /* nuestra clase container va a tener margen automatico y va a ocupar el 90% de la pantalla */
+      width: 90%;
+      margin: auto;
+      border-bottom: #fff; /* le pongo un borde blanco al final de toda la navegacion*/
+      
+  }
+  /* ahora vamos a cambiar nuestros estilos de navegacion */
+  .nav-main {
+      font-size: 17PX;
+      display: flex; /* nos organizan los elementos uno del lado del otro */
+      justify-content: space-between ; /* utilizamos todo el ancho disponible*/
+       align-items: center; /*alinea los item centrados */
+       height: 60px; /* le damos altura*/
+       padding: 20px; /* le damos como margenes dentro del body*/
+
+    }
+/* ahora modico la imagen del menu */
+.nav-brand { 
+    width: 50px; /* modico el tamaño de la imagen */
+}
+/* ahora modifica la lista del menu */
+.nav-main ul {
+    display:flex; /* ponemos todos ul del menu al lado*/
+}
+.nav-main ul li{
+    padding: 10px; /* separamos cada li del menu en 10 px*/
+}
+.nav-main ul li a:hover{/* caundo pasamos el mouse*/
+    border-bottom: 2px solid #fff; /* al borde abajo de la lista cuando pasamos el mouse se pone blanco */
+
+}
+.nav-main ul li a{ 
+    padding: 2px; /* separacion entre cada uno de la lista*/
+}
+.nav-main ul.nav-menu {
+    flex: 1px;
+    margin-left: 20px;
+hr {margin:10px;
+
+}
+ /* separamosel margen de la izquierda donde esta la imagen 10 px*/
+}
+/* aca terminamos con la barra de navegacion 
+
+*/ 
+/* empezamos con la parte del centro */
+.showcase {
+    background: url(img/showcase2.jpg) no-repeat center center/cover;
+    padding-bottom: 50px;
+    width:100%; /* le modifico la ancho*/
+    height:550px; /* le modico el altura */ 
+    display: flex; /* pone cada cosa al lado de la otra */ 
+    align-items: center; /* centra cada item dentro del cuadro*/
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+/* modico el boton seguir*/
+.btn {
+    cursor: pointer;/* cambia el cursor cuando paso por >>*/
+    display: inline-block; 
+    border:0;
+    font-weight: bold; /*cambia el texto a negrita */ 
+    padding: 10px 20px ;
+    background: #1e272e; /* cambia el color de fondo del boton*/
+    color:#fff;/*cambia el color del texto del boton*/
+    font-size: 15px; /* tamaño del texto*/
+    border: 1px solid #fff; /* que tenga bordes*/
+    margin:10px 0;
+    }
+ .btn:hover{
+     opacity:0.7 ;/* le decimos que cuando pasemos el cursor se ponga mas opaco el boton seguir*/
+
+ }   
+ .showcase h2 {
+margin-bottom: 10px;/* margen abajo al h2*/
+
+ }
+ .showcase p {
+    margin-bottom: 10px;/* margen abajo al p*/
+    
+     }
+     /* ahora empiezo a dar estilo a mis 4 noticias */
+
+ .news-cards{
+     display: grid;
+     grid-template-columns:1fr 1fr 1fr 1fr; /* para que sean 4 columnas*/
+    gap: 25px;/* separo cada columna por 25px*/
+    margin: 10px 0; /*margen de 10 px arriba y abajo y de o hacia los lados*/
+
+    }
+
+ 
+.news-cards img{/* configuramos el tamaño de las imagenes*/
+    width:100%;
+    height: 100px;
+    
+}
+.news-cards h3{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.news-cards a{ /* le doy estilo a las ver mas*/
+    padding: 10px;
+    color: #f2f2f2;
+    text-transform: uppercase; /* mayusculas*/
+    display: inline-block;
+    font-weight: bold; /*negrita*/
+
+}
+.news-cards a :hover{
+    border-bottom: solid #fff;
+}
+
+/* ahora le damos estilo al banner */
+.cards-banner-one {
+    width: 100;
+    height: 360px;
+    background: url(img/tech-red.jpg);
+    margin-bottom: 40px;
+
+    
+}
+
+    .cards-banner-one .content{/* le damos estilo a las letras dentro de la imagen*/
+        width: 50%;
+        padding:90px 0 0 30px ;
+        color: #fff;
+        }
+  
+.cards-banner-one .content h2{
+    margin: 10px 0 20px 0;
+   
+} 
+.cards-banner-one .content p{
+    margin: 10px 0 20px 0;
+}
+
+/* le damos estilo al card banneer 2*/
+.card-banner-two{
+    width: 100%;
+    height: 360px;
+    background: url(img/image-five.jpg)no-repeat center center/cover;
+
+}
+.card-banner-two .contenido{/* le damos estilo a las letras dentro de la imagen*/
+    width: 50%;
+    padding:100px 0 0 30px ;
+    color: #fff;
+    }
+
+.card-banner-two .contenido h2{
+margin: 10px 0 20px 0;
+
+} 
+.cards-banner-two .contenido p{
+margin: 10px 0 20px 0;
+}
+/* redes sociales*/
+.social{
+    margen 50px;
+}
+.social p{/*le doy estilo a la palabra siguieme*/
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+
+}
+.link {/* le doy estilo a los iconos de las redes*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.link a {
+    margin: 0 30px;
+}
+.link i{
+    font-size: 30px;
+}
+ 
+/* ahora le damos estilos al cuadrado con 4 comumnas*/
+.footer-links{
+background: #1e272e;
+color: burlywood;  
+font-size: 12px; 
+padding: 35px 0;
+margin-top: 10px;
+}
+.footer-contenido{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);/*para poner 4 columnas*/
+    gap: 10px;
+    align-items:flex-start ;
+    justify-content: center;
+  
+}
+.footer-contenido ul{
+    margin: 0 auto;
+}
+.footer-contenido ul li{
+    line-height: 1.8; /* separa el texto de cada columna*/
+
+}
+.footer{
+ 
+ color:  #616161;
+ font-size: 12px;
+ padding: 20px 50px;
+ text-align: center;
+ padding-bottom: 20px;
+ 
+}
+/* ahora lo modifico para telefonos */
+@media (max-width: 600px) {
+    .nav-main ul.nav-menu { /* programo el menu*/
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        background:#2f3640;
+        height: 100%;
+        padding: 30px;
+        opacity: .9;   
+        transform: translatex(-400px);
+        transition: transform .5s ease-in-out;/* se aparace con 5 segundos de efecto*/
+    }
+    .menu-btn {
+        display: flex;
+       
+    }
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+    .news-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .cards-banner-one .content,
+    .card-banner-two .contenido {
+      width: 100%;
+      padding: 60px 20px;
+    
+
+
+    }
+    .footer-links .footer-contenido {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-links .footer-contenido ul {
+      text-align: center;
+    }
+    
+}
+.menu-btn{ /* ahora configuro el boton del menu*/
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+   /* display: none;*/
+    z-index: 2;
+    font-size: 1.5rem;
+}

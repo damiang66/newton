@@ -1,0 +1,37 @@
+.menu {	flex-grow:1 ;
+align-items: center;	
+margin: 10;
+
+							 }
+.nosotros{
+	color: darkblue;
+			border-style: solid;
+			display: inline;
+			padding: 50;
+			background-color: rojo;
+			width: 500px;
+			height: 500px;
+							 }
+.consultas{color: darkblue;
+			border-style: solid;
+			display: inline;
+			padding: 5;
+			background-color: rojo;
+			width: 500px;
+			height: 500px;
+}
+.ayuda {color: darkblue;
+			border-style: solid;
+			display: inline;
+			padding: 5;
+			background-color: rojo;
+			width: 500px;
+			height: 500px;
+		}
+.contactarnos {color: darkblue;
+			border-style: solid;
+			display: inline;
+			padding: 5;
+			background-color: rojo;
+			width: 500px;
+			height: 500px;}			

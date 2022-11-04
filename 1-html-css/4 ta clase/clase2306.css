@@ -1,0 +1,52 @@
+/*TIPO DE SELECTORES*/
+/*ETIQUETA*/
+/**{
+	margin: 0;
+	color: white; cambia el color de la fuente	
+}*/
+.container{
+	/*border-width: 2px;
+	border-color: black;
+	border-style: solid;*/
+
+	border:  2px solid black;
+}
+.menu{
+	border: 2px solid red;
+	display: flex;
+	background-color: #48e;
+}
+.menu img{
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	border-radius: 100%;
+
+}
+h1{
+	color: #444;
+	font-size: 60px;
+	font-family: 'Verdana';
+	margin-left: 350px;
+}
+/*section{
+	background-color: goldenrod; /*modifica el fondo*/
+nav{
+margin-left: 250px;	
+margin-top: 60px;
+}
+a{
+	padding: 16px;
+	text-decoration: none;/* le saca el subrayado*/
+	color:#000;
+	font-size: 16px;
+}
+/*CLASE*/
+/*.menu{
+	background-color: black;
+}
+*/
+/*ID*/
+/*#uno{
+	background-color: grey;
+}*/

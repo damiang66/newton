@@ -1,0 +1,26 @@
+nav{
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+}
+a{
+    
+    padding: 20px;
+    text-decoration: none;
+
+}
+.wasp{
+    border: 2px solid green;
+    border-radius: 20px;
+    font-size: 30px;
+}
+.face{
+    border: 2px solid blue;
+    border-radius: 20px;
+    font-size: 30px;
+}
+.instagram{
+    border: 2px solid violet;
+    border-radius: 20px;
+    font-size: 30px;
+}

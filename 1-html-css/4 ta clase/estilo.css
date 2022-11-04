@@ -1,0 +1,23 @@
+body {
+    /*background-color: aqua;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {
+    width: 480px;
+    background-color: thistle;
+    margin: auto;/* centra a la mitad de la pantalla*/
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid purple;
+}
+p{
+    font-weight: 600;
+    
+}
+.btn{
+width: 150px;
+padding: 8px;
+background-color: purple;
+margin-bottom: 10px;
+border-radius: 20px;/* redondea el boton*/
+}

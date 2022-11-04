@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title> 
+
+</head>
+
+<body>
+	<div class="container">
+		
+		<div class="noticias">
+			
+        <?php
+        $con = mysqli_connect('localhost,root,'','blog');
+        
+        $consulta = mysqli_query($con,"SELECT * FROM noticias WERE codNoticia=5");
+
+        while($mostrar=mysqul_fetch_array($consulta)){
+        ?>	
+
+
+			<div class="primero">
+				<h2><?php echo $mostar['titulo']; ?></h2>
+				<span id="fecha"></span>
+				<span id="autor"></span>
+				<p></p>	
+			</div>
+
+			<?php
+			}
+		    ?>
+
+			<div class="segundo">
+				<h2></h2>
+				<span id="fecha"></span>
+				<span id="autor"></span>
+				<p></p>	
+			</div>
+
+		<aside>
+			
+		</aside>
+
+
+
+		</div>
+
+	</div>
+
+
+
+		
+</body>
+</html>
